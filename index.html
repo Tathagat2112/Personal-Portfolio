@@ -22,10 +22,13 @@
       referrerpolicy="no-referrer"
     />
     <title>Tathagat Panwar</title>
-    
+
     <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='grad' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%23FF6B6B'/><stop offset='50%' style='stop-color:%234ECDC4'/><stop offset='100%' style='stop-color:%23556270'/></linearGradient></defs><circle cx='50' cy='50' r='48' fill='url(%23grad)' stroke='white' stroke-width='1.5'/><text x='43' y='65' font-family='Georgia' font-size='45' font-weight='bold' fill='white' text-anchor='middle' style='letter-spacing: -1px; font-style: italic'>T</text><text x='57' y='65' font-family='Georgia' font-size='45' font-weight='bold' fill='white' text-anchor='middle' style='letter-spacing: -1px; font-style: italic'>P</text></svg>" type="image/svg+xml">
-    
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='grad' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%23FF6B6B'/><stop offset='50%' style='stop-color:%234ECDC4'/><stop offset='100%' style='stop-color:%23556270'/></linearGradient></defs><circle cx='50' cy='50' r='48' fill='url(%23grad)' stroke='white' stroke-width='1.5'/><text x='43' y='65' font-family='Georgia' font-size='45' font-weight='bold' fill='white' text-anchor='middle' style='letter-spacing: -1px; font-style: italic'>T</text><text x='57' y='65' font-family='Georgia' font-size='45' font-weight='bold' fill='white' text-anchor='middle' style='letter-spacing: -1px; font-style: italic'>P</text></svg>"
+      type="image/svg+xml"
+    />
   </head>
   <body id="top">
     <!-- NAVBAR -->
@@ -59,18 +62,19 @@
       <section id="about" class="about">
         <!-- <div class="spacer"></div> -->
         <div class="headshot">
-          <img src="images/headshot.jpeg" alt="Profile-picture" />
+          <img src="images/Tathagat_Panwar.jpg" alt="Profile-picture" />
         </div>
         <div class="text">
           <h2>Hi! I'm Tathagat</h2>
           <p>
             A Computer Science student at Arizona State University with a
             passion for technology, innovation, and problem-solving. With
-            expertise in programming languages like HTML, CSS, JavaScript, Java,
-            Python, Kotlin and MySQL, I've worked on projects ranging from data
-            analytics dashboards to mobile app development. Beyond academics, I
-            love playing and watching all kinds of sports (mainly soccer and
-            cricket), which fuels my energy and teamwork mindset.
+            expertise in programming languages like HTML, CSS, JavaScript,
+            ReactJS, Java, Python, Kotlin and MySQL, I've worked on projects
+            ranging from data analytics dashboards to mobile app development.
+            Beyond academics, I love playing and watching all kinds of sports
+            (mainly soccer and cricket), which fuels my energy and teamwork
+            mindset.
           </p>
           <div class="links">
             <a
@@ -86,6 +90,13 @@
             >
               <i class="fa-solid fa-envelope"></i><span>Email</span>
             </a>
+            <a
+              href="resume.pdf"
+              download="Tathagat_Panwar_Resume.pdf"
+              class="resume-download"
+            >
+              <i class="fa-solid fa-file-pdf"></i><span>Download Resume</span>
+            </a>
           </div>
         </div>
       </section>
@@ -93,32 +104,31 @@
 
       <!-- Section 2: Work Ex -->
       <section id="work" class="work">
-
         <div class="experience-container">
           <!-- Left Column: Technical Experience -->
           <div class="experience-column">
             <h2 class="column-heading">Technical Experience</h2>
             <div class="experience-card">
               <div class="heading">
-                Capstone Project Member - Circle.ooo (Sept 2024 - Present)
+                Capstone Project Member - Circle.ooo (Sept 2024 - May 2025)
               </div>
               <ul class="list">
                 <li>
-                  Collaborating with a team to develop a data analytics
-                  dashboard for event hosts, providing insights on user
-                  engagement and sponsorship ROI.
+                  Developed a real-time event host dashboard using Next.js,
+                  React, Tailwind CSS, and deployed it on Google Cloud Platform.
                 </li>
                 <li>
-                  Leveraging tools such as React, Firebase, and Google Cloud to
-                  build and deploy dashboard functionalities.
+                  Designed key UI components (event selector, profile page,
+                  metric cards) and integrated Go-based APIs for live event
+                  data.
                 </li>
                 <li>
-                  Conducting data analysis and integration to enhance
-                  decision-making capabilities of event organizers.
+                  Implemented secure authentication with Firebase and ensured
+                  responsive, accessible, and scalable user experience.
                 </li>
                 <li>
-                  Working in alignment with the Circle.ooo team to meet project
-                  goals and ensure deliverables align with startup needs.
+                  Led sprint planning and sponsor communication as Scrum Master,
+                  ensuring alignment with evolving project goals.
                 </li>
               </ul>
             </div>
@@ -152,12 +162,12 @@
             <h2 class="column-heading">On-Campus Participation @ ASU</h2>
             <div class="experience-card">
               <div class="heading">
-                Secretary - IEEE Eta Kappa Nu (HKN) at ASU (May 2024 - Present)
+                Secretary - IEEE Eta Kappa Nu (HKN) at ASU (May 2024 - May 2025)
               </div>
               <ul class="list">
-                <li>Maintain records of all General and Officer Meetings.</li>
+                <li>Maintained records of all General and Officer Meetings.</li>
                 <li>
-                  Manage notices, newsletters, and notifications for events via
+                  Managed notices, newsletters, and notifications for events via
                   email and Slack.
                 </li>
               </ul>
@@ -274,53 +284,79 @@
       <!-- Section 5: Contact -->
       <section id="contact" class="contact">
         <h2>Get in Touch</h2>
-        <p>I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.</p>
-        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-          <input type="hidden" name="access_key" value="1072c49b-930a-45ce-814d-96b267aea9ca">
+        <p>
+          I'm always open to discussing new projects, creative ideas or
+          opportunities to be part of your visions.
+        </p>
+        <form
+          id="contactForm"
+          action="https://api.web3forms.com/submit"
+          method="POST"
+        >
+          <input
+            type="hidden"
+            name="access_key"
+            value="1072c49b-930a-45ce-814d-96b267aea9ca"
+          />
           <input type="text" name="name" placeholder="Name" required />
           <input type="email" name="email" placeholder="Email" required />
           <textarea name="message" placeholder="Message" required></textarea>
           <button type="submit">Send Message</button>
         </form>
         <!-- Confirmation message (hidden by default) -->
-        <div id="confirmationMessage" style="display: none; margin-top: 20px; padding: 20px; background-color: #edf6f9; border: 1px solid #83c5be; border-radius: 8px;">
-          <h3 style="color: #006d77; margin-bottom: 10px;">Thank You!</h3>
-          <p style="color: #83c5be;">Your message has been sent successfully. I'll get back to you soon!</p>
+        <div
+          id="confirmationMessage"
+          style="
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #edf6f9;
+            border: 1px solid #83c5be;
+            border-radius: 8px;
+          "
+        >
+          <h3 style="color: #006d77; margin-bottom: 10px">Thank You!</h3>
+          <p style="color: #83c5be">
+            Your message has been sent successfully. I'll get back to you soon!
+          </p>
         </div>
       </section>
     </main>
 
     <script>
       // Form submission handler
-      document.getElementById('contactForm').addEventListener('submit', function(e) {
-        setTimeout(function() {
-          document.getElementById('contactForm').style.display = 'none';
-          document.getElementById('confirmationMessage').style.display = 'block';
-        }, 1000);
-      });
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          setTimeout(function () {
+            document.getElementById("contactForm").style.display = "none";
+            document.getElementById("confirmationMessage").style.display =
+              "block";
+          }, 1000);
+        });
 
       // Mobile menu handler
-      const menuToggle = document.querySelector('.menu-toggle');
-      const navRight = document.querySelector('.right');
-      
-      menuToggle.addEventListener('click', () => {
-        menuToggle.classList.toggle('active');
-        navRight.classList.toggle('active');
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navRight = document.querySelector(".right");
+
+      menuToggle.addEventListener("click", () => {
+        menuToggle.classList.toggle("active");
+        navRight.classList.toggle("active");
       });
 
       // Close menu when clicking a link
-      document.querySelectorAll('.right a').forEach(link => {
-        link.addEventListener('click', () => {
-          menuToggle.classList.remove('active');
-          navRight.classList.remove('active');
+      document.querySelectorAll(".right a").forEach((link) => {
+        link.addEventListener("click", () => {
+          menuToggle.classList.remove("active");
+          navRight.classList.remove("active");
         });
       });
 
       // Close menu when clicking outside
-      document.addEventListener('click', (e) => {
-        if (!e.target.closest('.right') && !e.target.closest('.menu-toggle')) {
-          menuToggle.classList.remove('active');
-          navRight.classList.remove('active');
+      document.addEventListener("click", (e) => {
+        if (!e.target.closest(".right") && !e.target.closest(".menu-toggle")) {
+          menuToggle.classList.remove("active");
+          navRight.classList.remove("active");
         }
       });
     </script>
