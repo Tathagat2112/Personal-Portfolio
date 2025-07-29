@@ -200,18 +200,6 @@ hr {
   transform: translateY(-2px);
 }
 
-.about .links a.resume-download {
-  background-color: #e29578;
-  border-color: #e29578;
-  color: #edf6f9;
-}
-
-.about .links a.resume-download:hover {
-  background-color: #edf6f9;
-  color: #e29578;
-  border-color: #e29578;
-}
-
 /* Work Experience Section */
 .experience-container {
   display: flex;
