@@ -5,6 +5,7 @@ const NAV_LINKS = [
   { label: "About", href: "#about" },
   { label: "Experience", href: "#experience" },
   { label: "Skills", href: "#skills" },
+  { label: "Certifications", href: "#certifications" },
   { label: "Projects", href: "#projects" },
   { label: "Contact", href: "#contact" },
 ];
@@ -111,6 +112,48 @@ const LEADERSHIP_EXP = [
       "Served as a university ambassador and reached out via email and SMS to help new students stay on track.",
     ],
     tags: ["Leadership", "Student Services"],
+  },
+];
+
+const CERTIFICATIONS = [
+  {
+    title: "Bloomberg Finance Fundamentals",
+    issuer: "Bloomberg for Education",
+    issued: "June 2026",
+    skills: ["Finance", "Financial Markets"],
+    verificationUrl:
+      "https://portal.bloombergforeducation.com/certificates/aUtqQFbhuVW9CSBCyBMnUEpC",
+    accent: "blue",
+  },
+  {
+    title: "The Complete JavaScript Course 2025: From Zero to Expert!",
+    issuer: "Udemy",
+    issued: "January 2025",
+    credentialId: "UC-55381798-c8a6-45a9-bf04-bb76b7512439",
+    skills: ["JavaScript"],
+    verificationUrl:
+      "https://www.udemy.com/certificate/UC-55381798-c8a6-45a9-bf04-bb76b7512439/",
+    accent: "yellow",
+  },
+  {
+    title: "Responsive Web Design",
+    issuer: "freeCodeCamp",
+    issued: "December 2024",
+    credentialId: "tathagat21-rwd",
+    skills: ["HTML", "CSS", "Responsive Design"],
+    verificationUrl:
+      "https://www.freecodecamp.org/certification/Tathagat21/responsive-web-design",
+    accent: "violet",
+  },
+  {
+    title: "The Complete Android 13 App Development Bootcamp 2023",
+    issuer: "Udemy",
+    issued: "July 2023",
+    credentialId: "UC-89fc76e7-8809-48a5-9e3c-5a8631736f4a",
+    skills: ["Kotlin", "Java", "Android"],
+    verificationUrl:
+      "https://www.udemy.com/certificate/UC-89fc76e7-8809-48a5-9e3c-5a8631736f4a/",
+    accent: "green",
   },
 ];
 
@@ -225,7 +268,7 @@ export default function Portfolio() {
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 50);
-      const ids = ["about", "experience", "skills", "projects", "contact"];
+      const ids = ["about", "experience", "skills", "certifications", "projects", "contact"];
       for (const id of [...ids].reverse()) {
         const el = document.getElementById(id);
         if (el && window.scrollY >= el.offsetTop - 140) {
@@ -429,6 +472,51 @@ export default function Portfolio() {
               ))}
             </div>
           </Reveal>
+        </div>
+      </section>
+
+      <hr className="divr" />
+
+      <section id="certifications" className="sec">
+        <div className="sec-inner">
+          <Reveal>
+            <p className="label">Certifications</p>
+            <h2 className="heading">Courses completed and credentials earned</h2>
+          </Reveal>
+          <div className="cert-grid">
+            {CERTIFICATIONS.map((certification, index) => (
+              <Reveal key={certification.title} delay={index * 0.05}>
+                <article className={`cert-card cert-${certification.accent}`}>
+                  <div className="cert-top">
+                    <div className="cert-mark" aria-hidden="true">
+                      {certification.issuer.slice(0, 1)}
+                    </div>
+                    <div>
+                      <div className="cert-issuer">{certification.issuer}</div>
+                      <div className="cert-issued">Issued {certification.issued}</div>
+                    </div>
+                  </div>
+                  <h3 className="cert-title">{certification.title}</h3>
+                  {certification.credentialId && (
+                    <p className="cert-id">Credential ID {certification.credentialId}</p>
+                  )}
+                  <div className="cert-skills">
+                    {certification.skills.map((skill) => (
+                      <span key={skill}>{skill}</span>
+                    ))}
+                  </div>
+                  <a
+                    href={certification.verificationUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="cert-link"
+                  >
+                    Verify credential <span aria-hidden="true">↗</span>
+                  </a>
+                </article>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
