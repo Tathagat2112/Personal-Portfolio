@@ -1,5 +1,4 @@
 :root {
-  color-scheme: dark;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -14,15 +13,20 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {
   margin: 0;
   min-width: 320px;
-  background:
-    radial-gradient(circle at top left, rgba(255, 126, 95, 0.18), transparent 28%),
-    radial-gradient(circle at top right, rgba(86, 204, 242, 0.16), transparent 32%),
-    linear-gradient(180deg, #08111f 0%, #091424 45%, #07101b 100%);
+  background: var(--bg, #f4f2ec);
+  transition: background 0.4s ease;
 }
 
 #root {
