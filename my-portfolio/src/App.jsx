@@ -16,7 +16,10 @@ const SKILLS = [
   { name: "Go", color: "#00ADD8", icon: "go" },
   { name: "React", color: "#61DAFB", icon: "react" },
   { name: "Next.js", color: "#ffffff", icon: "nextdotjs" },
+  { name: "Supabase", color: "#3FCF8E", icon: "supabase" },
+  { name: "PostgreSQL", color: "#4169E1", icon: "postgresql" },
   { name: "Firebase", color: "#FFCA28", icon: "firebase" },
+  { name: "MongoDB", color: "#47A248", icon: "mongodb" },
   { name: "Tailwind", color: "#06B6D4", icon: "tailwindcss" },
   { name: "HTML/CSS", color: "#E34F26", img: "/images/html-logo.webp" },
   { name: "Java", color: "#ED8B00", img: "/images/java-logo.png" },
@@ -28,12 +31,27 @@ const SKILLS = [
 
 const TECH_EXP = [
   {
+    role: "Co-Founding Engineer",
+    company: "ExecShot LLC",
+    link: "https://execshot.com",
+    period: "Jun 2026 - Present",
+    location: "Remote",
+    bullets: [
+      "Co-founded and shipped a production AI SaaS that turns a handful of selfies into studio-quality headshots, built on Next.js 16, React 19, TypeScript, and Supabase.",
+      "Built the AI generation engine, firing 30-50 Google Gemini calls per batch on serverless long-duration functions with a fallback client, delivering 30 headshots at a 90% success rate and cutting cost per shoot from around $200 to under $30.",
+      "Engineered a viral acquisition loop that grants a free headshot after Instagram or TikTok verification, lifting signups and lowering customer acquisition cost.",
+      "Implemented a credit-based Stripe payment system with idempotent webhook fulfillment, eliminating duplicate-charge bugs.",
+      "Instrumented full-funnel analytics with Google Tag Manager, GA4, and Meta Pixel, and used the data to raise checkout conversion.",
+    ],
+    tags: ["Next.js 16", "React 19", "TypeScript", "Supabase", "Gemini API", "Stripe", "GA4"],
+  },
+  {
     role: "Software Engineer Intern",
     company: "Sport Sitters",
     period: "May - Aug 2025",
     location: "Tempe, AZ",
     bullets: [
-      "Built and maintained a production-grade admin dashboard for a 2-sided marketplace using Next.js, TypeScript, and Firebase, used daily by the 4-person founding team.",
+      "Built real-time admin and event-management features for a two-sided marketplace serving 300+ users, using Next.js, TypeScript, and Firebase.",
       "Engineered an analytics module surfacing 12+ revenue and engagement KPIs, geographic heatmaps, and CSV export.",
       "Integrated Stripe for payments, refunds, and payouts and implemented Firebase Auth with role-based access across 3 user types.",
       "Shipped a real-time notification and review system using Firestore listeners and custom React hooks, delivering updates in under a second.",
@@ -46,9 +64,10 @@ const TECH_EXP = [
     period: "Sep 2024 - May 2025",
     location: "Tempe, AZ",
     bullets: [
-      "Developed a real-time event host dashboard with live metrics and profile views, deployed on GCP.",
+      "Engineered a production-grade event host dashboard with live metrics and profile views for 200+ users, deployed on GCP.",
       "Consumed and integrated 15+ Go-based REST endpoints and built context-based state management with custom hooks.",
-      "Led sprint planning and stakeholder communication as Scrum Master across a 5-person team over 8+ two-week sprints.",
+      "Implemented secure, role-based authentication across a two-sided marketplace.",
+      "Served as Scrum Master for a 4-member team, coordinating sprints and stakeholder communication over 8+ two-week sprints.",
       "Ensured WCAG accessibility and full mobile responsiveness across 20+ shared components.",
     ],
     tags: ["Next.js", "React", "Go APIs", "GCP", "Firebase"],
@@ -74,7 +93,7 @@ const LEADERSHIP_EXP = [
     period: "Jan - Nov 2025",
     location: "ASU",
     bullets: [
-      "Managed all club financial operations including budgeting, reimbursements, and transaction processing.",
+      "Managed a $10,000+ annual budget along with reimbursements, transaction processing, and audits.",
       "Ensured compliance with ASU financial policies and coordinated with university administrative offices.",
     ],
     tags: ["Finance", "Operations"],
@@ -86,7 +105,7 @@ const LEADERSHIP_EXP = [
     location: "ASU",
     bullets: [
       "Maintained full records of all general and officer meetings.",
-      "Managed newsletters and event notifications for a 100+ member chapter via email and Slack.",
+      "Ran newsletters and event notifications for the chapter via email and Slack, supporting the induction of 100+ students.",
     ],
     tags: ["Communication", "Organization"],
   },
@@ -154,15 +173,36 @@ const CERTIFICATIONS = [
 
 const PROJECTS = [
   {
+    title: "ExecShot",
+    year: "2026",
+    tech: "Next.js 16 · React 19 · Supabase · Gemini",
+    description:
+      "An AI headshot studio. Upload a few selfies and get 30 studio-quality headshots back. The generation engine fires 30-50 Gemini calls per batch on serverless long-duration functions with a fallback client, holding a 90% success rate while dropping the cost of a shoot from around $200 to under $30.",
+    link: "https://execshot.com",
+    highlights: ["AI generation engine", "Stripe credits", "Viral referral loop", "GA4 + Meta Pixel"],
+    img: "/images/execshot.jpg",
+    featured: true,
+  },
+  {
+    title: "Frugain",
+    year: "2026",
+    tech: "TypeScript · Next.js · PostgreSQL · Supabase",
+    description:
+      "A nutrition tracker that records what your food costs alongside its macros, then shows you the cheapest path to your daily protein and calorie targets. Built and shipped solo: 21K+ lines of TypeScript, live in production.",
+    link: "https://frugain.com",
+    highlights: ["Linear-program optimizer", "Adaptive TDEE model", "15-screen PWA", "TTFB 664ms to 300ms"],
+    img: "/images/frugain.jpg",
+    featured: true,
+  },
+  {
     title: "Roomana",
     year: "2025",
     tech: "Next.js · TypeScript · Firebase · Tailwind",
     description:
-      "A roommate-finding platform for ASU students. It matches people by lifestyle, verifies students when they sign up, lets you browse listings, and has reviews so you know what you're walking into. It's live with 35+ active users.",
+      "A roommate-finding platform for ASU students. It matches people by lifestyle, verifies students when they sign up, lets you browse listings, and has reviews so you know what you're walking into. It drew 300+ visitors in its first two weeks and is live with 35+ active users.",
     link: "https://roomana-app.vercel.app/",
     highlights: ["Lifestyle matching", "Verified ASU sign-in", "Housing reviews", "Serverless backend"],
     img: "/images/roomana.jpg",
-    featured: true,
   },
   {
     title: "RunCycler",
@@ -186,13 +226,33 @@ const PROJECTS = [
   },
 ];
 
+const EDUCATION = [
+  {
+    degree: "M.S. Computer Science",
+    school: "Arizona State University",
+    period: "August 2026",
+    location: "Tempe, AZ",
+    detail: "GPA 3.58",
+  },
+  {
+    degree: "B.S. Computer Science, Summa Cum Laude",
+    school: "Arizona State University",
+    period: "May 2025",
+    location: "Tempe, AZ",
+    detail: "GPA 4.00",
+  },
+];
+
+const AWARDS = ["Moeur Award", "Dean's List (8 semesters)", "New American University Scholar"];
+
 const SPECS = [
-  ["Academic", "M.S. Computer Science, Arizona State University. Summa Cum Laude, 2026"],
+  ["Academic", "M.S. Computer Science (2026) and B.S. Computer Science, Summa Cum Laude (2025), Arizona State University"],
+  ["Now", "Co-Founding Engineer at ExecShot, building Frugain alongside it"],
   ["Experience", "2 software engineering internships (Sport Sitters, Circle.ooo)"],
-  ["Roomana", "Live, with 35+ active users"],
-  ["Core stack", "Next.js, TypeScript, React, Firebase, GCP, Stripe"],
-  ["Also comfortable with", "Python, Go, Java, Kotlin, Tailwind"],
-  ["Availability", "Open to full-time roles"],
+  ["Shipped", "ExecShot and Frugain in production, Roomana live with 35+ active users"],
+  ["Core stack", "Next.js, React, TypeScript, Supabase, PostgreSQL, Firebase, GCP, Stripe"],
+  ["Also comfortable with", "Go, Python, Java, SQL, MongoDB, Tailwind, GA4 and Google Tag Manager"],
+  ["Availability", "Open to full-time software engineering roles"],
 ];
 
 /* ------------------------------------------------------------------ helpers */
@@ -318,7 +378,7 @@ function SkillIcon({ icon, img, color, name }) {
   );
 }
 
-/* interactive constellation behind the statement — reacts to the cursor */
+/* interactive constellation behind the statement, reacts to the cursor */
 function Constellation() {
   const canvasRef = useRef(null);
 
@@ -476,14 +536,14 @@ const BOOT = [
 
 const RESP = {
   help: 'commands: <span class="t-g">about</span> <span class="t-g">work</span> <span class="t-g">skills</span> <span class="t-g">experience</span> <span class="t-g">education</span> <span class="t-g">contact</span> <span class="t-g">resume</span> <span class="t-g">clear</span> <span class="t-g">exit</span>',
-  about: "I'm a software engineer. I like taking rough ideas and getting them to something people can actually use. I mostly work with Next.js, TypeScript, and Firebase.",
+  about: "I'm a software engineer and the co-founding engineer at ExecShot. I like taking rough ideas and getting them to something people can actually use. I mostly work with Next.js, TypeScript, Supabase, and Firebase.",
   whoami: '<span class="t-c">tathagat_panwar</span>, software engineer. M.S. Computer Science at ASU.',
-  work: '<span class="t-y">01</span> Roomana <span class="t-dim">(2025, Next.js/Firebase)</span>: ASU roommate platform, 35+ users<br><span class="t-y">02</span> RunCycler <span class="t-dim">(2024, JS/Leaflet)</span>: real-time route tracker<br><span class="t-y">03</span> Record Keeper <span class="t-dim">(2023, Kotlin)</span>: Android records app',
-  skills: "TypeScript · JavaScript · Python · Go · React · Next.js · Firebase · Tailwind · Java · Kotlin · Git · GCP · Stripe",
-  experience: 'SWE Intern · Sport Sitters <span class="t-dim">(2025)</span><br>SWE Intern · Circle.ooo <span class="t-dim">(2024–25)</span><br>IT Intern · MDS TS <span class="t-dim">(2024)</span>',
-  education: 'M.S. Computer Science · Arizona State University · Summa Cum Laude · <span class="t-c">2026</span>',
-  contact: 'email  <a href="mailto:panwartathagat@gmail.com">panwartathagat@gmail.com</a><br>github <a href="https://github.com/Tathagat2112" target="_blank" rel="noopener">github.com/Tathagat2112</a><br>lnkdn  <a href="https://linkedin.com/in/tathagatpanwar/" target="_blank" rel="noopener">linkedin.com/in/tathagatpanwar</a>',
-  resume: "M.S. CS @ ASU · Summa Cum Laude · 2 SWE internships · shipped Roomana (35+ users). Open to full-time roles.",
+  work: '<span class="t-y">01</span> ExecShot <span class="t-dim">(2026, Next.js/Supabase/Gemini)</span>: AI headshot studio, 30 shots per batch at 90% success<br><span class="t-y">02</span> Frugain <span class="t-dim">(2026, TypeScript/PostgreSQL)</span>: budget-aware nutrition tracker, 21K+ lines, solo<br><span class="t-y">03</span> Roomana <span class="t-dim">(2025, Next.js/Firebase)</span>: ASU roommate platform, 35+ users<br><span class="t-y">04</span> RunCycler <span class="t-dim">(2024, JS/Leaflet)</span>: real-time route tracker<br><span class="t-y">05</span> Record Keeper <span class="t-dim">(2023, Kotlin)</span>: Android records app',
+  skills: "Go · TypeScript · JavaScript · Python · SQL · Java · React · Next.js · Tailwind · PostgreSQL · Supabase · Firebase · MongoDB · GCP · Stripe · Git · GA4 · Google Tag Manager",
+  experience: 'Co-Founding Engineer · ExecShot LLC <span class="t-dim">(2026-present)</span><br>SWE Intern · Sport Sitters <span class="t-dim">(2025)</span><br>SWE Intern · Circle.ooo <span class="t-dim">(2024-25)</span><br>IT Intern · MDS TS, Abu Dhabi/Dubai <span class="t-dim">(2024)</span>',
+  education: 'M.S. Computer Science · Arizona State University · <span class="t-c">Aug 2026</span> · GPA 3.58<br>B.S. Computer Science, Summa Cum Laude · Arizona State University · <span class="t-c">May 2025</span> · GPA 4.00<br><span class="t-dim">awards:</span> Moeur Award · Dean\'s List (8 semesters) · New American University Scholar',
+  contact: 'email  <a href="mailto:panwartathagat@gmail.com">panwartathagat@gmail.com</a><br>github <a href="https://github.com/TathagatPanwar" target="_blank" rel="noopener">github.com/TathagatPanwar</a><br>lnkdn  <a href="https://linkedin.com/in/tathagatpanwar/" target="_blank" rel="noopener">linkedin.com/in/tathagatpanwar</a>',
+  resume: "M.S. CS @ ASU (2026) · B.S. CS Summa Cum Laude, 4.00 · co-founding engineer at ExecShot · 2 SWE internships · shipped ExecShot, Frugain, and Roomana. Open to full-time roles.",
   sudo: '<span class="t-y">nice try.</span> permission denied 😏',
   ls: '<span class="t-c">about.txt</span>  <span class="t-c">work/</span>  <span class="t-c">skills.json</span>  <span class="t-c">resume.pdf</span>  <span class="t-c">contact.md</span>',
 };
@@ -608,10 +668,10 @@ export default function Portfolio() {
   const [termOpen, setTermOpen] = useState(false);
   const [theme, setTheme] = useState(() => {
     try {
-      return localStorage.getItem("theme") || "system";
+      return localStorage.getItem("theme") || "dark";
     } catch (err) {
       void err;
-      return "system";
+      return "dark";
     }
   });
   const profileRef = useRef(null);
@@ -760,27 +820,28 @@ export default function Portfolio() {
             </h1>
             <p className="tagline">Based in Tempe, Arizona.</p>
             <p className="hero-sub">
-              I mostly work with <strong>Next.js, TypeScript, and Firebase</strong>. I like taking a rough idea and
-              turning it into something people can actually use, and I pay as much attention to how it feels as to how it's built.
+              Co-founding engineer at <strong>ExecShot</strong>, where I ship an AI headshot product on{" "}
+              <strong>Next.js, TypeScript, and Supabase</strong>. I like taking a rough idea and turning it into
+              something people can actually use, and I pay as much attention to how it feels as to how it's built.
             </p>
             <div className="hero-btns">
               <a href="#work" className="btn-p" onClick={(e) => { e.preventDefault(); goto("#work"); }}>See my work</a>
               <a href="mailto:panwartathagat@gmail.com" className="btn-g">Get in touch</a>
             </div>
             <div className="stats">
+              <a href="https://execshot.com" target="_blank" rel="noopener noreferrer" className="stat stat-link spot" onMouseMove={spotlight}>
+                <span className="stat-link-arrow" aria-hidden="true">↗</span>
+                <div className="stat-v"><CountUp value={3} /></div>
+                <div className="stat-l">Products live in production</div>
+              </a>
               <div className="stat spot" onMouseMove={spotlight}>
                 <div className="stat-v"><CountUp value={2} /></div>
                 <div className="stat-l">SWE internships</div>
               </div>
               <div className="stat spot" onMouseMove={spotlight}>
-                <div className="stat-v"><CountUp value={3} /></div>
-                <div className="stat-l">Projects shipped</div>
+                <div className="stat-v"><CountUp value={4} decimals={2} /></div>
+                <div className="stat-l">Undergrad GPA, Summa Cum Laude</div>
               </div>
-              <a href="https://roomana-app.vercel.app/" target="_blank" rel="noopener noreferrer" className="stat stat-link spot" onMouseMove={spotlight}>
-                <span className="stat-link-arrow" aria-hidden="true">↗</span>
-                <div className="stat-v"><CountUp value={35} suffix="+" /></div>
-                <div className="stat-l">Active users on Roomana</div>
-              </a>
             </div>
           </Reveal>
 
@@ -826,7 +887,7 @@ export default function Portfolio() {
               <Reveal key={project.title} delay={i * 0.06}>
                 <a href={project.link} target="_blank" rel="noopener noreferrer" className={`work${project.featured ? " feat" : ""} spot`} onMouseMove={spotlight}>
                   <div className="work-media">
-                    <img src={project.img} alt={project.title} />
+                    <img src={project.img} alt={`${project.title} screenshot`} loading="lazy" />
                   </div>
                   <div className="work-body">
                     <div className="work-top">
@@ -868,7 +929,15 @@ export default function Portfolio() {
                 <div className="exp-head">
                   <div>
                     <div className="exp-role">{exp.role}</div>
-                    <div className="exp-co">{exp.company}</div>
+                    <div className="exp-co">
+                      {exp.link ? (
+                        <a href={exp.link} target="_blank" rel="noopener noreferrer">
+                          {exp.company} <span aria-hidden="true">↗</span>
+                        </a>
+                      ) : (
+                        exp.company
+                      )}
+                    </div>
                   </div>
                   <div className="exp-when">
                     <div className="exp-period">{exp.period}</div>
@@ -911,7 +980,37 @@ export default function Portfolio() {
       <section id="credentials" className="sec alt">
         <div className="sec-inner">
           <Reveal>
-            <p className="label">Credentials</p>
+            <p className="label">Education</p>
+            <h2 className="heading">Where I studied.</h2>
+          </Reveal>
+          <div className="edu-list">
+            {EDUCATION.map((e, i) => (
+              <Reveal key={e.degree} delay={i * 0.05} variant="left">
+                <div className="edu spot" onMouseMove={spotlight}>
+                  <div className="edu-main">
+                    <div className="edu-degree">{e.degree}</div>
+                    <div className="edu-school">{e.school}</div>
+                  </div>
+                  <div className="edu-when">
+                    <div className="edu-period">{e.period}</div>
+                    <div className="edu-loc">{e.location}</div>
+                    <div className="edu-detail">{e.detail}</div>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+          <Reveal delay={0.05}>
+            <div className="awards">
+              <span className="awards-k">Awards</span>
+              <div className="tagrow">
+                {AWARDS.map((a) => <span key={a} className="tag">{a}</span>)}
+              </div>
+            </div>
+          </Reveal>
+
+          <Reveal>
+            <p className="label label-gap">Credentials</p>
             <h2 className="heading">Courses and certifications.</h2>
           </Reveal>
           <div className="cert-grid">
@@ -960,8 +1059,9 @@ export default function Portfolio() {
               <p className="label">Contact</p>
               <h2 className="heading" style={{ marginBottom: 20 }}>Let's talk.</h2>
               <p className="ct-blurb">
-                I'm finishing my master's in computer science and looking for full-time software engineering roles. If you're
-                hiring, have a project in mind, or just want to say hi, send me a note.
+                I just wrapped up my master's in computer science at ASU, and I'm building ExecShot and Frugain in the
+                meantime. I'm open to full-time software engineering roles. If you're hiring, have a project in mind,
+                or just want to say hi, send me a note.
               </p>
               <a href="mailto:panwartathagat@gmail.com" className="clink spot" onMouseMove={spotlight}>
                 <div className="clink-icon">✉</div>
@@ -971,9 +1071,9 @@ export default function Portfolio() {
                 <div className="clink-icon">in</div>
                 <div><div className="clink-lbl">linkedin.com/in/tathagatpanwar</div><div className="clink-sub">LinkedIn</div></div>
               </a>
-              <a href="https://github.com/Tathagat2112" target="_blank" rel="noopener noreferrer" className="clink spot" onMouseMove={spotlight}>
+              <a href="https://github.com/TathagatPanwar" target="_blank" rel="noopener noreferrer" className="clink spot" onMouseMove={spotlight}>
                 <div className="clink-icon">{"</>"}</div>
-                <div><div className="clink-lbl">github.com/Tathagat2112</div><div className="clink-sub">GitHub</div></div>
+                <div><div className="clink-lbl">github.com/TathagatPanwar</div><div className="clink-sub">GitHub</div></div>
               </a>
             </Reveal>
             <Reveal delay={0.1}>
@@ -1000,7 +1100,7 @@ export default function Portfolio() {
       </section>
 
       <footer>
-        <span>Built by Tathagat Panwar · 2025</span>
+        <span>Built by Tathagat Panwar · 2026</span>
         <button className="console-trigger" onClick={() => setTermOpen(true)} aria-label="Open console">
           <span className="ct-caret">▸_</span>
         </button>
